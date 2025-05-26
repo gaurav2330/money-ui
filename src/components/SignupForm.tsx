@@ -44,7 +44,7 @@ export default function Signupform() {
               <label htmlFor="name">Name</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control mb-2"
                 name="email"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -53,7 +53,7 @@ export default function Signupform() {
               <label htmlFor="username">Username</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control mb-2"
                 name="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -62,13 +62,17 @@ export default function Signupform() {
               <label htmlFor="password">Password</label>
               <input
                 type="password"
-                className="form-control"
+                className="form-control mb-2"
                 name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
               />
             </div>
+            <button type="submit" className="btn btn-primary w-100">
+              Signup
+            </button>
+            {error && <div className="text-danger mt-2">{error}</div>}
           </form>
         </div>
       </div>

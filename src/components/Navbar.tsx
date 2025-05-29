@@ -1,42 +1,22 @@
-import React from 'react';
-
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/home">
-        <img src="/logo.png" height="80px;" width="80px;" alt="Moneymaze logo" className="mb-4" />
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Budgets
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Transactions
-            </a>
-          </li>
-        </ul>
+    <header className="d-flex flex-row px-3 py-2 justify-content-between">
+      <h1 className="text-xl font-bold">Money Maze</h1>
+      <div className="d-flex flex-row">
+        <nav className="d-flex flex-row items-center">
+          <ul className="d-flex flex-row navbar-nav">
+            <li className="nav-item"><a href="#" className="text-gray-700">Dashboard</a></li>
+            <li className="nav-item"><a href="#" className="text-gray-700">Transactions</a></li>
+            <li className="nav-item"><a href="#" className="text-gray-700">Savings</a></li>
+            <li className="nav-item"><a href="#" className="text-gray-700">Credit</a></li>
+            <li className="nav-item"><a href="#" className="text-gray-700">Investments</a></li>
+          </ul>
+        </nav>
+        <div className="flex items-center">
+          <img src="/path/to/avatar.jpg" alt="Profile" className="w-8 h-8 rounded-full" />
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };
 

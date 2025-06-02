@@ -17,7 +17,7 @@ const Dashboard = () => {
     try {
       const response = await fetch("http://localhost:3939/transactions", {
         headers: {
-          Authorization: `${authToken}`,
+          Authorization: `Bearer ${authToken}`,
         },
       });
 
@@ -26,7 +26,7 @@ const Dashboard = () => {
       }
 
       const data = await response.json();
-      setTransactions(data.transactions);
+      setTransactions(data.data);
     } catch (e:any) {
       setError(e.message);
     }
